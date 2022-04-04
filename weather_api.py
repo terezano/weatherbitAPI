@@ -45,7 +45,7 @@ values = ['min_temp', 'max_temp', 'precip']
 for num in range(len(STATIONS_DF)):
     time.sleep(0.5)
 
-    #e.g. https://api.weatherbit.io/v2.0/history/daily?lat=-36.0502777777777&lon=-63.6080555555555&start_date=2021-01-01&end_date=2021-12-31&key=195f1d7f7130453c87c814ed0b3102b7
+    #e.g. https://api.weatherbit.io/v2.0/history/daily?lat=-36.0502777777777&lon=-63.6080555555555&start_date=2021-01-01&end_date=2021-12-31&key=apikey
     link = LINK + f"?lat={STATIONS_DF.loc[num][1]}&lon={STATIONS_DF.loc[num][2]}&start_date={STATIONS_DF.loc[num][4]}&end_date={STATIONS_DF.loc[num][5]}&key={API_KEY}"
    
     pprint(link)
